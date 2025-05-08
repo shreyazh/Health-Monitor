@@ -79,6 +79,65 @@
             margin-top: 10px;
             display: none;
         }
+        .header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1e90ff, #0073e6);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* ✅ This adds the vertical gap */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: #1e90ff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.user-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+}
 
         .chart-container {
             height: 200px;
@@ -120,18 +179,20 @@
 <body>
 <div class="container">
 
-<div class="header header-content">
-<div class="user-profile">
-<div class="user-avatar">SS</div>
-<div>
-<h1>Shreyash Srivastva</h1>
-<p>Last updated: <span id="lastUpdate">Just now</span></p>
-</div>
-</div>
-<div class="real-time-status">
-<span id="statusIndicator">●</span> Real-time monitoring active
-    </div>
-</div>
+    <div class="header-card">
+        <div class="header-left">
+          <div class="avatar-circle">SS</div>
+          <div class="user-info">
+            <div class="user-name">Shreyash Srivastva</div>
+            <div class="user-subtitle">Real-time health metrics integrated with genomic data</div>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="status-dot"></span>
+          <span class="status-text">Monitoring Active</span>
+        </div>
+      </div>
+      
 
 <div class="dashboard-grid">
 <div class="dashboard-card">
